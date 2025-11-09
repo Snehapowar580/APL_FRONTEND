@@ -34,12 +34,12 @@ const AppContextProvider = ({ children }) => {
         setDoctors(res.data.doctors);
       } else {
         console.warn("Unexpected API response:", res.data);
-        toast.error(res.data?.message || "Unable to fetch doctors.");
+        toast.error(res.data?.message || "Unable to fetch Test.");
       }
     } catch (error) {
-      console.error("❌ Error fetching doctors:", error);
+      console.error("❌ Error fetching Test:", error);
       const message =
-        error.response?.data?.message || "Failed to fetch doctor data.";
+        error.response?.data?.message || "Failed to fetch Test data.";
       toast.error(message);
     }
   };
